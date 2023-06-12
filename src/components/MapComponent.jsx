@@ -1,28 +1,3 @@
-// // import React, { Component } from "react";
-// // import { Map, GoogleApiWrapper } from "google-map-react";
-// // class MapContainer extends Component {
-// //   render() {
-// //     return (
-// //       <Map
-// //         google={this.props.google}
-// //         zoom={8}
-// //         // style={mapStyles}
-// //         style={{
-// //           width: "100%",
-// //           height: "100%",
-// //         }}
-// //         initialCenter={{ lat: 30.66643, lng: 76.86129 }}
-// //       />
-// //       // {/* {this.displayMarkers()} */}
-// //       //   {/* </Map> */}
-// //     );
-// //   }
-// // }
-
-// // export default GoogleApiWrapper({
-// //     apiKey:"AIzaSyDgTXPf5ou4iMy5ZYEzBbUYX8zhxsxtqVA"
-// // })(MapContainer)
-
 import React from "react";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
@@ -100,7 +75,7 @@ const MapComponent = () => {
                 color: theme.palette.mode === "dark" ? "#070707" : "#212121",
               }}
             >
-              Sector-20, Panchkula
+              Panchkula, Haryana
             </Typography>
           </Popup>
         </Marker>

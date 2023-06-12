@@ -6,7 +6,9 @@ import {
   alpha,
   useTheme,
 } from "@mui/material";
-import Tejas from "../../assets/Tejas_Photo.jpg";
+// import Tejas from "../../assets/Tejas_Photo.jpg";
+// import Tejas from "../../assets/tejasMemoji.png";
+import Tejas from '../../assets/tejas.png'
 import EmailTwoToneIcon from "@mui/icons-material/EmailTwoTone";
 import CallTwoToneIcon from "@mui/icons-material/CallTwoTone";
 import EventTwoToneIcon from "@mui/icons-material/EventTwoTone";
@@ -133,7 +135,7 @@ const Home = () => {
         </Box>
         <Avatar
           sx={{
-            bgcolor: theme.palette.text.primary,
+            bgcolor: theme.palette.primary.main,
             height: 400,
             width: 400,
             // borderRadius:2
