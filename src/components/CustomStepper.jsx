@@ -129,7 +129,7 @@ export default function CustomStepper() {
   };
 
   const handleStepperMouseLeave = () => {
-    setActiveStep(-1);
+    setActiveStep(1);
   };
 
   return (
@@ -159,19 +159,21 @@ export default function CustomStepper() {
               </Typography>
             </CustomStepLabel>
             <StepContent>
-              <Typography
-                sx={{
-                  color: theme.palette.text.primary,
-                }}
-              >
-                {/* {step.description} */}
-                <CustomCard
-                  imgsrc={step.imgsrc}
-                  label={step.label}
-                  description={step.description}
-                  tech={step.tech}
-                />
-              </Typography>
+              <Box>
+                <Typography
+                  sx={{
+                    color: theme.palette.text.primary,
+                  }}
+                >
+                  {/* {step.description} */}
+                  <CustomCard
+                    imgsrc={step.imgsrc}
+                    label={step.label}
+                    description={step.description}
+                    tech={step.tech}
+                  />
+                </Typography>
+              </Box>
             </StepContent>
           </Step>
         ))}

@@ -16,6 +16,7 @@ import { Slide, useScrollTrigger, useTheme } from "@mui/material";
 import PropTypes from "prop-types";
 import { useState } from "react";
 import { useEffect } from "react";
+import { Link } from "react-scroll";
 
 function ElevationScroll(props) {
   const { children } = props;
