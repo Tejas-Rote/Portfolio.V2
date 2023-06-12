@@ -5,10 +5,11 @@ const position = [30.66643, 76.86129];
 import { Typography, useTheme } from "@mui/material";
 import { useEffect } from "react";
 import { useRef } from "react";
-
+import { icon as leafletIcon } from "leaflet";
+import MarkerIcon from '../assets/Vector.png'
 const MapComponent = () => {
   const theme = useTheme();
-  console.log(theme.palette.mode);
+  // console.log(theme.palette.mode);
   const markerRef = useRef();
 
   useEffect(() => {
@@ -35,6 +36,13 @@ const MapComponent = () => {
     scrollWheelZoom: false, // Disable zooming on scroll
   };
 
+  const customMarkerIcon = leafletIcon({
+    iconUrl: MarkerIcon ,
+    iconSize: [20, 30], // Adjust the size of the icon
+    iconAnchor: [10, 30], // Adjust the position of the icon anchor
+    popupAnchor: [0, -32], // Adjust the position of the popup anchor
+  });
+
   return (
     <div style={mapContainerStyle}>
       <MapContainer
@@ -53,7 +61,7 @@ const MapComponent = () => {
           url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
           attribution={false}
         />
-        <Marker position={position} ref={markerRef}>
+        <Marker position={position} icon={customMarkerIcon} ref={markerRef}>
           <Popup
             sx={{
               backgroundColor: theme.palette.primary.main,
