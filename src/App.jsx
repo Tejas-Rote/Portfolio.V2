@@ -18,6 +18,7 @@ function App() {
   const handleChange = () => {
     setDarkMode(DarkMode === "light" ? "dark" : "light");
   };
+
   const theme = createTheme({
     breakpoints: {
       values: {
@@ -71,6 +72,7 @@ function App() {
           }),
     },
   });
+
   const [showBackToTop, setShowBackToTop] = React.useState(false);
 
   React.useEffect(() => {
